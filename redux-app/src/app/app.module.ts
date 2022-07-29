@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+//nx
 import { StoreModule } from '@ngrx/store'; 
+import { contadorReducer } from './contador/contador.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HijoComponent } from './contador/hijo/hijo.component';
 import { NietoComponent } from './contador/nieto/nieto.component';
-import { contadorReducer } from './contador/contador.reducer';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,7 @@ import { contadorReducer } from './contador/contador.reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({contador : contadorReducer})
-  ],
+    StoreModule.forRoot({ contador: contadorReducer })], 
   providers: [],
   bootstrap: [AppComponent]
 })
