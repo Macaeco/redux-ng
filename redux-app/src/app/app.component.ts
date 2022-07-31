@@ -24,6 +24,11 @@ export class AppComponent {
       console.log(state)
       this.contador = state.contador
     })
+    this.store.select('contador').subscribe(contador=>{
+      console.log(contador)
+      this.contador = contador
+    })
+
 
   }
 
